@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"trial-app/app/models"
+
 	"github.com/revel/revel"
 )
 
@@ -16,5 +18,7 @@ func (c App) Index() revel.Result {
 
 // Articles method to list articles given ofset and limit
 func (c App) Articles(offset int, limit int) revel.Result {
-	return c.Render(offset)
+
+	var _, articles = models.GetArticles(offset, limit)
+	return c.Render(articles)
 }

@@ -1,0 +1,12 @@
+{{range $index, $article := .articles}}
+  <div>
+    <h1>{{$article.Name}}</h1>
+    <div>
+      <p>{{$article.Content}}</p>
+      <p>{{$article.CategoryName}}</p>
+      <p>{{$article.CategorySlug}}</p>
+      <p>{{$article.AuthorName}}</p>
+      <p>{{$article.AuthorAbout}}</p>
+    </div>
+  </div>
+{{end}}

@@ -1,6 +1,8 @@
 package app
 
 import (
+	"trial-app/app/models"
+
 	"github.com/revel/revel"
 )
 
@@ -29,13 +31,13 @@ func init() {
 		revel.ActionInvoker,           // Invoke the action.
 	}
 
-
 	// register startup functions with OnAppStart
 	// revel.DevMode and revel.RunMode only work inside of OnAppStart. See Example Startup Script
 	// ( order dependent )
 	// revel.OnAppStart(ExampleStartupScript)
 	// revel.OnAppStart(InitDB)
 	// revel.OnAppStart(FillCache)
+	revel.OnAppStart(models.InitDB)
 }
 
 // HeaderFilter adds common security headers
