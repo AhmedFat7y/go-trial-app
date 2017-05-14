@@ -20,7 +20,7 @@ var dbmap *gorp.DbMap
 var dbName = "testsupermam"
 var dbUser = "supermum"
 var dbPassword = "hello@mum"
-var dbHost = "tcp(127.0.0.1:3301)"
+var dbHost = "tcp(127.0.0.1:3306)"
 
 // InitDB Create database connection
 func InitDB() {
